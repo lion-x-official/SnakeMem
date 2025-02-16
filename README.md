@@ -1,4 +1,4 @@
-﻿﻿## 🐍 SnakeMem
+﻿# 🐍 SnakeMem
 
 SnakeMem is a lightweight and efficient C++ library for working with process memory on Windows. It allows developers to read and write process memory, retrieve module information, and manipulate pointers with ease.
 
@@ -27,6 +27,7 @@ cd SnakeMem
 ## 📖 Usage Guide
 
 ### 🔍 Memory Reading
+
 - `ReadInt(uintptr_t address)`: Reads an integer from memory.
 - `ReadFloat(uintptr_t address)`: Reads a floating-point value.
 - `ReadDouble(uintptr_t address)`: Reads a double-precision floating-point value.
@@ -34,19 +35,23 @@ cd SnakeMem
 - `ReadPointers(uintptr_t base, const std::vector<unsigned int>& offsets)`: Reads a pointer with multiple offsets.
 
 ### ✍️ Memory Writing
+
 - `Write<T>(uintptr_t address, T value)`: Writes a value of type `T` to memory.
 - `WritePointer(uintptr_t address, uintptr_t value)`: Writes a pointer to memory.
 
 ### 🖥️ Process and Module Management
+
 - `GetProcessId()`: Retrieves the process ID.
 - `GetProcessHandle()`: Returns the process handle.
 - `GetModuleAddress(const char* module)`: Gets the base address of a module.
 
 ### ⚙️ Process Control
+
 - `IsProcessActive()`: Checks if the target process is running.
 - `CloseProcess()`: Closes the handle to the process.
 
 ### 🔄 Pointer Manipulation
+
 - `ReverseSearchPointer(uintptr_t start, uintptr_t end, uintptr_t targetValue)`: Searches memory for a specific pointer value.
 
 ---
